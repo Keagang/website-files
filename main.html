@@ -1,0 +1,378 @@
+<html>
+<!--<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+      }
+
+      ul.nav {
+        text-align: right;
+      }
+
+      ul.nav li {
+        display: inline-block;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .title-card {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-area {
+        position: relative;
+      }
+
+      footer ul li {
+        list-style: none;
+      }
+      #popUpWindow{
+  //background: lightblue; 
+}
+    </style>
+  </head>
+
+  <body>
+    <!-- Just align it to the right of its container element. Either change the display attribute to block and set the right and left margins to 0 and auto, or keep it as an inline element and apply text-align: right to the container block.-->
+    <style type="text/css">
+     #search{
+  display:block;
+  margin: 0 0 0 auto;
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#search:focus {
+  width: 100%;
+}
+    </style>
+    <nav class="navbar" style="background-color: #2b215e; border-radius: 0px; height:150px; margin-bottom: 0px;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="img/logo1.jpeg" style="width: 350px; height: 100px;"></a>
+          <div style="float: left; margin: 0 0 0 850px; ">
+            <ul class="nav navbar-nav">
+              <li class="muted" style=" font-size: 20px; color: white; margin-top: 5px;">
+                Location
+              </li>
+              <li class="navitem" style="vertical-align: top; cursor: pointer; ">
+               <form>
+  <input id="search" type="text" name="search" placeholder="Search..">
+</form>
+              </li>
+              <li>
+                <button type='button' style="background-color: transparent; border: none;" data-toggle="modal" data-target="#popUpWindow"><i class="fas fa-user-alt" style=" font-size: 40px; color: white;"></i></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--<section>
+      Come and look at the home of the future
+    </section>-->
+    <div class="container">
+  
+  <div class="modal fade" id="popUpWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Login Form</h3>
+        </div>
+        <!-- body -->
+        <div class="modal-header">
+          <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email"/><br>
+              <input type="password" class="form-control" placeholder="Password" />
+            </div>
+          </form>
+        </div>
+        <!-- footer -->
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block">Log In</button>
+          <button id="clickreg" class="btn btn-warning btn-block" data-toggle="modal" data-target="#REG, #popUpWindow" >Don't Have an Acccount? Click here</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="REG">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Registration Form</h3>
+        </div>
+        <!-- body -->
+        <div class="modal-header">
+          <form role="form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username"/><br>
+              <input type="email" class="form-control" placeholder="Email"/><br>
+              <input type="password" class="form-control" placeholder="Password" />
+            </div>
+          </form>
+        </div>
+        <!-- footer -->
+        <div class="modal-footer">
+          <button class="btn btn-warning btn-block"data-toggle="modal" data-target="#REG">REGISTER</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+   
+
+    <section id="intro" class="section-intro bg-secondary pt-5" style="color:white; background-color:#003366;">
+      <div class="container">
+        <div class="row d-flex" style="min-height:400px;">
+          <div class="col-sm-6 d-flex align-items-center" style="top: 150px;">
+            <header class="intro-wrap text-white">
+              <h3>Washing Machines and Dryers <br></h3>
+              <p>Cleaning and Washing Made Easy!</p>
+              <a class="btn btn-primary" href="bs-template-resourceszip\bootstrap-ecommerce-uikit\main\washingmain.html">View Collection</a>
+            </header>
+            <!-- intro-wrap .// -->
+          </div>
+          <!-- col.// -->
+          <div class="col-sm-6 text-right">
+            <img style="float: right; margin: 0px 200px 50px 0px; " src="img/fridge.png">
+          </div>
+          <!-- col.// -->
+        </div>
+        <!-- row.// -->
+      </div>
+      <!-- container .//  -->
+    </section>
+    <section id="intro" class="section-intro bg-secondary pt-5" style="color:white; background-color:grey;">
+      <div class="container">
+        <div class="row d-flex" style="min-height:400px;">
+          <div class="col-sm-6 text-right">
+            <img style="width: 500px; height: 500px; margin: 0px 200px 50px 0px; " src="img/oven.png">
+          </div>
+          <div class="col-sm-6 d-flex align-items-center" style="top: 150px;">
+            <header class="intro-wrap text-white">
+              <h3 style="font-family: " HelveticaNeue-Light ", "Helvetica Neue Light ", "Helvetica Neue ", Helvetica, Arial, "Lucida Grande ", sans-serif;"> Refridgerators and Ovens<br></h3>
+              <p>Your Kitchen has never looked so amazing!</p>
+              <a class="btn btn-primary" href="#">View Collection</a>
+            </header>
+            <!-- intro-wrap .// -->
+          </div>
+        </div>
+        <!-- row.// -->
+      </div>
+      <!-- container .//  -->
+    </section>
+    <section id="intro" class="section-intro bg-secondary pt-5" style="color:black; background-color:white;">
+      <div class="container">
+        <div class="row d-flex" style="min-height:400px;">
+          <div class="col-sm-6 d-flex align-items-center" style="top: 150px;">
+            <header class="intro-wrap text-white">
+              <h3 style="font-family: " HelveticaNeue-Light ", "Helvetica Neue Light ", "Helvetica Neue ", Helvetica, Arial, "Lucida Grande ", sans-serif;">Security Cams and Recorders<br></h3>
+              <p> Keep everything cruising smoothly.</p>
+              <a class="btn btn-primary" href="#">View Collection</a>
+            </header>
+            <!-- intro-wrap .// -->
+          </div>
+          <!-- col.// -->
+          <div class="col-sm-6 text-right">
+            <img style="float: right; margin: 70px 200px 50px 0px; width: 200px; height:200px;" src="img/cam.png">
+          </div>
+          <!-- col.// -->
+        </div>
+        <!-- row.// -->
+      </div>
+      <!-- container .//  -->
+    </section>
+    <section id="intro" class="section-intro bg-secondary pt-5" style=" background-color:#CCCC99;">
+      <div class="container">
+        <div class="row d-flex" style="min-height:400px;">
+          <div class="col-sm-6 text-right">
+            <img style="float: right; margin: 70px 100px 50px 0; width: 500px; height:400px;" src="img/pups.png">
+          </div>
+          <!-- col.// -->
+          <div class="col-sm-6 d-flex align-items-center" style="top: 150px;">
+            <header class="intro-wrap text-white">
+              <h3 style="font-family: " HelveticaNeue-Light ", "Helvetica Neue Light ", "Helvetica Neue ", Helvetica, Arial, "Lucida Grande ", sans-serif;">Pet Products<br></h3>
+              <p>You love em, We love em too!</p>
+              <a class="btn btn-primary" href="#">View Collection</a>
+            </header>
+            <!-- intro-wrap .// -->
+          </div>
+          <!-- col.// -->
+        </div>
+        <!-- row.// -->
+      </div>
+      <!-- container .//  -->
+    </section>
+
+<style type="text/css">
+  .search-text{
+  padding-top:30px;
+  padding-bottom:60px;
+}
+  
+.search-text .input-search{
+  height:45px;
+  width:20%;
+  padding-left:20px;
+    color:#333;
+} 
+
+.search-text .btn-search{
+    background: #2b215e;
+    font-family:Roboto;
+    border:none;
+  color:#FFF;
+  height: 45px;
+    width: 80px;
+}
+
+.search-text h4{
+    color: #FFF;
+    font-weight: 700;
+}
+
+footer{
+     background-color: #33383c;
+     padding:30px 0px;
+}        
+
+.logo{
+    color:#FFF;
+    font-weight:700;
+    font-size:30px;
+}
+
+.address span , .menu span{
+   color: #FFF; 
+   font-weight: bold; 
+   border-bottom: 1px solid #c7c7c7; 
+   padding:10px 0px;
+   display: block;
+   text-transform: uppercase;
+   font-size: 16px;
+   letter-spacing: 3px;
+}
+ 
+.address li a , .menu li a{
+    color:#FFF;
+    letter-spacing: 3px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.address li, .menu li{
+    margin:20px 0px;
+    list-style: none;
+}
+
+.address li a:hover , .menu li a:hover{
+    color: #4937a3;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.address .fa{
+    color: #4937a3;
+    margin-right: 10px;
+    font-size:18px;
+}
+</style>
+<footer>
+ <div class="container">
+   <div class="row">
+   
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <span class="logo">Happy Shopping!</span>
+              <div class="search-text"> 
+   <div class="container">
+     
+       <div class="form">
+           <h4>SIGN UP TO OUR NEWSLETTER</h4>
+            <form id="search-form" class="form-search form-horizontal">
+                <input type="text" class="input-search" placeholder="Email Address">
+                <button type="submit" class="btn-search">SUBMIT</button>
+            </form>
+        </div>
+    
+      </div>         
+   </div>     
+
+
+            </div>
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+             <ul class="list-unstyled menu">
+              <span>INFO LINKS</span>
+              <li>
+                <a href="#!">Terms and Conditions</a>
+              </li>
+              <li>
+                <a href="#!">Shipping Info</a>
+              </li>
+              <li>
+                <a href="#!">Contact Us</a>
+              </li>
+              <li>
+                <a href="#!">Return Policy</a>
+              </li>
+            </ul>
+
+            </div>
+       
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="address">
+                    <span>Contact</span>       
+                    <li>
+                       <i class="fa fa-phone" aria-hidden="true"></i> <a href="#">Phone</a>
+                    </li>
+                    <li>
+                       <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="#">Adress</a>
+                    </li> 
+                    <li>
+                       <i class="fa fa-envelope" aria-hidden="true"></i> <a href="#">Email</a>
+                    </li> 
+               </ul>
+           </div>
+       
+       
+       </div> 
+    </div>
+     <div class="footer-copyright text-center py-3">© 2018 CopyRight Protected.
+      </div>
+</footer>
+</body>
+
+</html>
